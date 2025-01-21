@@ -8,13 +8,14 @@
   margin: 0;
   list-style: none;
   outline: none;
-  font-family: "Proxima Nova", Roboto, system-ui, Tahoma, sans-serif;
+  font-family: "Proxima Nova", "Roboto", system-ui, Tahoma, sans-serif;
   box-sizing: border-box;
 }
 
 body {
   background-color: #ffffff;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -22,13 +23,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: #ffffff;
-
-  /*.tab-border {
-    display: flex;
-    border-bottom: 2px solid #0000000f;
-    width: 100%;
-    margin: 0;
-  }*/
 
   .header {
     margin-bottom: 20px;
@@ -41,26 +35,16 @@ body {
     box-shadow: 0px 0px 16px rgba(58, 58, 58, 0.1);
     border-radius: 16px;
     background: #ffffff;
+    height: 100%;
   }
 
   .form-container {
-    /* Frame 5 */
-
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 24px;
-
     width: 352px;
-
     background: #ffffff;
-    /* Shadow */
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 
     .tabs {
       display: flex;
@@ -78,11 +62,11 @@ body {
         width: 47px;
         justify-content: center;
         align-items: center;
-        flex: 1;
         text-align: center;
 
         font-family: "Roboto";
         font-size: 14px;
+        font-style: regular;
         line-height: 22px;
         font-weight: 400;
         color: #000000d9;

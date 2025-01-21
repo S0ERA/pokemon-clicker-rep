@@ -1,0 +1,30 @@
+li {
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  li img {
+    height: 50px;
+  }
+}
+
+.pokemon {
+  width: 149px;
+  height: 54px;
+}
+
+.clicker {
+  border-left: 2px solid #efefef;
+  width: 153px;
+  height: 54px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

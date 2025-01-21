@@ -1,46 +1,51 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
-import Pokemon from "./assets/img/pokemon.png";
-import Clicker from "./assets/img/clicker.png";
+import SignIn from "./pages/SignInForm.jsx";
+import SignUp from "./pages/SignUpForm.jsx";
+import Logo from "./components/Logo.jsx";
 
 function App() {
   return (
-    <div className="wrapper">
-      <div className="header">
-        <ul className="logo">
-          <li>
-            <img className="pokemon" src={Pokemon} alt="pokemon" />
-          </li>
-          <li>
-            <img className="clicker" src={Clicker} alt="clicker" />
-          </li>
-        </ul>
-      </div>
+    <Router>
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <div className="header">
+            <Logo />
+          </div>
+          <div className="form">
+            <div className="form-container">
+              <div className="tabs">
+                <NavLink
+                  to="/signup"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Sign Up
+                </NavLink>
 
-      <div className="form-container">
-        <form className="sign-in-form">
-          <div className="form-group">
-            <label>
-              <span className="required">*</span> Login
-            </label>
-            <input name="login" type="text" placeholder="Input login" />
+                <NavLink
+                  to="/signin"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Sign In
+                </NavLink>
+              </div>
+
+              <Routes>
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/" element={<SignIn />} />
+              </Routes>
+            </div>
           </div>
-          <div className="form-group">
-            <label>
-              <span className="required">*</span> Password
-            </label>
-            <input
-              name="password"
-              type="password"
-              placeholder="Input password"
-            />
-          </div>
-          <button className="submit-button" type="submit">
-            Sign in
-          </button>
-        </form>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

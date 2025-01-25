@@ -1,7 +1,7 @@
 import React from "react";
 
-import Pokemon from "../assets/img/pokemon.png";
-import Clicker from "../assets/img/clicker.png";
+import Pokemon from "../../Assets/img/pokemon.png";
+import Clicker from "../../Assets/img/clicker.png";
 
 function Logo() {
   return (

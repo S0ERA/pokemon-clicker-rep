@@ -1,6 +1,6 @@
 @import "fonts";
 
-@import "components/all";
+@import "all";
 @import "./index.scss";
 
 * {
@@ -49,6 +49,7 @@ body {
     .tabs {
       display: flex;
       justify-content: center;
+      margin-top: 24px;
       margin-bottom: 16px;
       gap: 32px;
       height: 46px;

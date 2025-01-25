@@ -3,14 +3,16 @@ import React from "react";
 import Pokemon from "../../Assets/img/pokemon.png";
 import Clicker from "../../Assets/img/clicker.png";
 
+import styles from "./Logo.module.scss";
+
 function Logo() {
   return (
-    <div className="logo">
-      <img className="pokemon" src={Pokemon} alt="pokemon" />
+    <div className={styles.logo}>
+      <img className={styles.pokemon} src={Pokemon} alt="pokemon" />
 
-      <div className="border-img" />
+      <div className={styles.borderImg} />
 
-      <img className="clicker" src={Clicker} alt="clicker" />
+      <img className={styles.clicker} src={Clicker} alt="clicker" />
     </div>
   );
 }

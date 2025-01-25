@@ -1,6 +1,5 @@
 @import "fonts";
 
-@import "all";
 @import "./index.scss";
 
 * {
@@ -23,75 +22,73 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: #ffffff;
+}
 
-  .header {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  box-shadow: 0px 0px 16px rgba(58, 58, 58, 0.1);
+  border-radius: 16px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px;
+  width: 352px;
+  background: #ffffff;
+}
+
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  gap: 32px;
+  height: 46px;
+  width: 100%;
+  border-bottom: 2px solid #0000000f;
+  padding: 0 115px;
+}
+
+a {
+  display: flex;
+  height: 46px;
+  width: 47px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  font-style: regular;
+  line-height: 22px;
+  font-weight: 400;
+  color: #000000d9;
+
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+  text-decoration: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &:hover {
+    color: #365fac;
   }
 
-  .form {
-    box-shadow: 0px 0px 16px rgba(58, 58, 58, 0.1);
-    border-radius: 16px;
-    background: #ffffff;
-    height: 100%;
+  &.active {
+    color: #365fac;
+    border-bottom: 2px solid #365fac;
   }
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 24px;
-    width: 352px;
-    background: #ffffff;
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-      margin-bottom: 16px;
-      gap: 32px;
-      height: 46px;
-      width: 100%;
-      border-bottom: 2px solid #0000000f;
-      padding: 0 115px;
-
-      a {
-        display: flex;
-        height: 46px;
-        width: 47px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        font-family: "Roboto";
-        font-size: 14px;
-        font-style: regular;
-        line-height: 22px;
-        font-weight: 400;
-        color: #000000d9;
-
-        cursor: pointer;
-        transition: all 0.3s;
-        white-space: nowrap;
-        text-decoration: none;
-        padding-top: 12px;
-        padding-bottom: 12px;
-
-        &:hover {
-          color: #365fac;
-        }
-
-        &.active {
-          color: #365fac;
-          border-bottom: 2px solid #365fac;
-        }
-      }
-    }
-  }
-  // .tab-border {
-  //   border-bottom: 2px solid #0000000f;
-  //   width: 352px;
-  // }
 }

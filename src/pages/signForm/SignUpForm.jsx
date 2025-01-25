@@ -1,30 +1,33 @@
 import React from "react";
+import styles from "./SignForm.module.scss";
 
 function SignUp() {
   return (
-    <form className="sign-up-form">
-      <div className="form-group">
-        <label>
-          <span className="required">*</span> Username
-        </label>
-        <input name="username" type="text" placeholder="Input username" />
-      </div>
-      <div className="form-group">
-        <label>
-          <span className="required">*</span> Email
-        </label>
-        <input name="email" type="email" placeholder="Input email" />
-      </div>
-      <div className="form-group">
-        <label>
-          <span className="required">*</span> Password
-        </label>
-        <input name="password" type="password" placeholder="Input password" />
-      </div>
-      <button className="submit-button" type="submit">
-        Sign Up
-      </button>
-    </form>
+      <form className={styles.signUpForm}>
+          <div className={styles.formGroup}>
+              <label className={styles.label}>
+                  <span className={styles.required}>*</span> Login
+              </label>
+              <input className={styles.input} name="login" type="text" placeholder="Input login" />
+          </div>
+          <div className={styles.formGroup}>
+              <label className={styles.label}>
+                  <span className={styles.required}>*</span> Password
+              </label>
+              <input className={styles.input} name="password" type="password" placeholder="Input password" />
+          </div>
+          <div className={styles.formGroup}>
+              <label className={styles.label}>
+                  <span className={styles.required}>*</span> Password confirmation
+              </label>
+              <input className={styles.input} name="password" type="password" placeholder="Input password again" />
+          </div>
+          <button className={styles.submitButton} type="submit">
+              Sign up
+          </button>
+      </form>
+
+
   );
 }
 

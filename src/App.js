@@ -2,49 +2,24 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  NavLink,
+  Route
 } from "react-router-dom";
 
-import SignIn from "./pages/SignInForm.jsx";
-import SignUp from "./pages/SignUpForm.jsx";
-import Logo from "./components/Logo.jsx";
+import SignIn from "./pages/signForm/SignInForm.jsx";
+import SignUp from "./pages/signForm/SignUpForm.jsx";
+import SignFormContainer from "./pages/SignFormContainer";
+
 
 function App() {
   return (
     <Router>
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <div className="header">
-            <Logo />
-          </div>
-          <div className="form">
-            <div className="form-container">
-              <div className="tabs">
-                <NavLink
-                  to="/signup"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Sign Up
-                </NavLink>
+      <Routes>
+        <Route path="/" element={<SignFormContainer />}>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
 
-                <NavLink
-                  to="/signin"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Sign In
-                </NavLink>
-              </div>
-
-              <Routes>
-                <Route path="/signin" element={<SignIn />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/" element={<SignIn />} />
-              </Routes>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Routes>
     </Router>
   );
 }

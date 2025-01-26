@@ -1,19 +1,14 @@
-import Logo from "../components/Logo/Logo";
+import React from "react";
 import {NavLink, Outlet} from "react-router-dom";
 
-import React from "react";
+import styles from "./Tabs.module.scss";
 
-function SignFormContainer() {
+function Tabs() {
 
     return (
-    <div className="wrapper">
-        <div className="form-wrapper">
-            <div className="header">
-                <Logo/>
-            </div>
-            <div className="form">
-                <div className="form-container">
-                    <div className="tabs">
+
+
+                    <div className={styles.tabs}>
                         <NavLink
                             to="/signup"
                             className={({isActive}) => (isActive ? "active" : "")}
@@ -28,13 +23,7 @@ function SignFormContainer() {
                             Sign In
                         </NavLink>
                     </div>
-
-                    <Outlet />
-                </div>
-            </div>
-        </div>
-    </div>
     )
 }
 
-export default SignFormContainer;
+export default Tabs;

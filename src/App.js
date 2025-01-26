@@ -7,17 +7,16 @@ import {
 
 import SignIn from "./pages/signForm/SignInForm.jsx";
 import SignUp from "./pages/signForm/SignUpForm.jsx";
-import SignFormContainer from "./pages/SignFormContainer";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<SignFormContainer />}>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Route>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+
 
       </Routes>
     </Router>

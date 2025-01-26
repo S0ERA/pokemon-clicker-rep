@@ -1,9 +1,19 @@
 import React from "react";
 import styles from "./SignForm.module.scss";
+import Tabs from "../../components/Tabs/Tabs";
+import Logo from "../../components/Logo/Logo";
 
 function SignUp() {
   return (
-      <form className={styles.signUpForm}>
+      <div className={styles.wrapper}>
+          <div className="form-wrapper">
+              <div className={styles.header}>
+                  <Logo/>
+              </div>
+              <div className={styles.form}>
+                  <div className={styles.formContainer}>
+      <Tabs />
+         <form className={styles.signUpForm}>
           <div className={styles.formGroup}>
               <label className={styles.label}>
                   <span className={styles.required}>*</span> Login
@@ -26,6 +36,10 @@ function SignUp() {
               Sign up
           </button>
       </form>
+          </div>
+      </div>
+          </div>
+      </div>
 
 
   );
